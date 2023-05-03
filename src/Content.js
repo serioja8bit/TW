@@ -40,21 +40,21 @@ function Content(props) {
     } else if (activeButton === 'Carduri') {
         return (
 
-            <Grid container spacing={2}>
-                <Grid item xs={4}>
+            <Grid container spacing ={3}>
+                <Grid item xs={12} sm={4} md={4}>
                     <MyCard {...snorlax}/>
                 </Grid>
-                <Grid item xs={4}>
-                    <MyCard {...pikachu}></MyCard>
+                <Grid item xs={12} sm={4} md={4}>
+                    <MyCard {...pikachu}/>
                 </Grid>
-                <Grid item xs={4}>
-                    <MyCard {...alakazam}></MyCard>
+                <Grid item xs={12} sm={4} md={4}>
+                    <MyCard {...alakazam}/>
                 </Grid>
-
             </Grid>
 
+
         );
-    } else if (activeButton === 'Check List') {
+    } else if (activeButton === 'CheckList') {
         return (
             <MyForm></MyForm>
         );

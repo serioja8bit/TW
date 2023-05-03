@@ -25,17 +25,29 @@ function App() {
 
     return (
         <div className={"App"}>
-
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
-                <Grid item xs={12}>
-                    <MenuButton text="Home" icon={<HomeIcon />} onClick={handleButtonClick} />
-                    <MenuButton text="Carduri" icon={<AutoAwesomeIcon />} onClick={handleButtonClick} />
-                    <MenuButton text="Check List" icon={<ChecklistIcon />} onClick={handleButtonClick} />
-                    <MenuButton text="Profile" icon={<PermIdentityIcon />} onClick={handleButtonClick} />
+            <div className={"menu"}>
+                <Grid container spacing={2} justifyContent="center">
+                    <Grid item xs={12} sm={10} md={8}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={6} sm={3}>
+                                <MenuButton text="Home" icon={<HomeIcon />} onClick={handleButtonClick} />
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                                <MenuButton text="Carduri" icon={<AutoAwesomeIcon />} onClick={handleButtonClick} />
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                                <MenuButton text="CheckList" icon={<ChecklistIcon />} onClick={handleButtonClick} />
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                                <MenuButton text="Profile" icon={<PermIdentityIcon />} onClick={handleButtonClick} />
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </div>
 
-            <Grid item xs={12} sx={{ margin: 5 }}>
+
+            <Grid item xs={12} sx={ {margin: 5 }}>
                 <Content activeButton={activeButton} />
             </Grid>
         </div>

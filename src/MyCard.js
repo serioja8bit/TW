@@ -16,9 +16,9 @@ function MyCard(props : Pokemon) {
                     {props.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {props.type}
-                    {props.height}
-                    {props.weight}
+                    Type:   {props.type} <br/>
+                    Height: {props.height}<br/>
+                    Weight: {props.weight}<br/>
                 </Typography>
             </CardContent>
         </Card>
