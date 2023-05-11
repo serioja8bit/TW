@@ -1,0 +1,23 @@
+.menu-container {
+    margin: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 25px;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+}
+
+.menu-item p {
+    margin-bottom: 0;
+}

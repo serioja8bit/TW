@@ -7,6 +7,10 @@ import i_pikachu from "./resources/fatPokemon.jpg"
 import MyForm from "./myinput";
 import {Pokemon} from "./MyInterface";
 
+import ToDoList from "./files/toDoList";
+import LoginButton from "./files/login";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import MenuApi from "./files/ApiMenu";
 
 const snorlax: Pokemon = {
     name: "Snorlax",
@@ -61,7 +65,41 @@ function Content(props) {
     }
     else if (activeButton === 'Profile') {
         return (
-            <h1>Profile</h1>
+            <div>
+                <Router>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <Link to="/home">Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/books">Books</Link>
+                                </li>
+                            </ul>
+                        </nav>
+                        <Routes>
+                            <Route
+                                path="/home"
+                                element={
+                                    <div /*style={{ backgroundColor: bgColor }} onMouseMove={handleMouseMove}*/>
+                                        <div>
+                                           {/* <IconButtonColors onClick={handleClick} />*/}
+                                            <LoginButton />
+                                        </div>
+                                        {/*<div className="box">{showCard && <ActionAreaCard />}</div>
+                                        <div>{showInput && <InputWithButton />}</div>*/}
+                                        <ToDoList />
+                                    </div>
+                                }
+                            />
+                            <Route path="/books" element={<MenuApi />} />
+                        </Routes>
+                    </div>
+                </Router>
+
+            </div>
+
         );
     }
     else{
